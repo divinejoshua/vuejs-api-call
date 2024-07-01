@@ -14,6 +14,7 @@ onMounted(() => {
 
 async function fetchJokes() {
   try {
+    //For AWS API Gateway to work, Delete the OPTIONS request from the method lists
     const response = await fetch('https://1k6dp49v7b.execute-api.us-east-1.amazonaws.com/teststage/data');
     const data = await response.json()
     info.value = data.body
