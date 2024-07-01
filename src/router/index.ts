@@ -18,6 +18,12 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       //@ts-ignore
       component: () => import('../views/AboutView.vue')
+    },
+    {
+      path: '/profile',
+      name: 'profile',
+      //@ts-ignore
+      component: () => import('../views/ProfileView.vue')
     }
   ]
 })
